@@ -5,7 +5,31 @@ import LayOut from '../../Components/LayOut/Layout'
 function Payment() {
   return (
     <LayOut>
-      <h1>pay here</h1>
+      {/* heading */}
+      <div>
+        checkout (2) items
+      </div>
+
+      {/* payment method*/}
+      <section>
+        {/* Address */}
+        <div>
+
+        </div>
+        <hr />
+
+        {/* payment */}
+        <div>
+
+        </div>
+        <hr />
+        {/* card Form */}
+        <div>
+
+        </div>
+
+      </section>
+
     </LayOut>
   )
 }
