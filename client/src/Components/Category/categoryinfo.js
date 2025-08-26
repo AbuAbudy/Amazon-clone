@@ -1,26 +1,23 @@
+// src/Components/Category/categoryInfo.js
 export const categoryInfo = [
-    {
-    "title": "WD 2TB Elements Portable External Hard Drive - USB 3.0 ",
-    "category": "electronics",
-    "image": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg"
-  },
-
   {
-    "title": "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats",
-    "category": "women's clothing",
-    "image": "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg"
-    
+    name: "Smartphones",
+    slug: "smartphones",
+    image: "https://cdn.dummyjson.com/product-images/smartphones/iphone-13-pro/thumbnail.webp"
   },
-
   {
-    "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-    "category": "men's clothing",
-    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+    name: "Laptops",
+    slug: "laptops",
+    image: "https://cdn.dummyjson.com/product-images/laptops/apple-macbook-pro-14-inch-space-grey/thumbnail.webp"
   },
-
   {
-    "title": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
-   "category": "jewelery",
-    "image": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg"
+    name: "Mens Shirts",
+    slug: "mens-shirts",
+    image: "https://cdn.dummyjson.com/product-images/mens-shirts/blue-&-black-check-shirt/thumbnail.webp"
+  },
+  {
+    name: "Womens Dresses",
+    slug: "womens-dresses",
+    image: "https://cdn.dummyjson.com/product-images/womens-dresses/black-women's-gown/thumbnail.webp"
   }
-]
+];

@@ -3,6 +3,14 @@
   margin: 0;
 }
 
+.fixed {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
 .header__container {
   background: #1a1a1a;
   color: white;
