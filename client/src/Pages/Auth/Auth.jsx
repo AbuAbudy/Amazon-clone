@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react'
 import classes from '../Auth/Auth.module.css'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { auth } from '../../Utility/firebase'
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth'
 import { DataContext } from '../../Components/DataProvider/DataProvider'
@@ -17,6 +17,8 @@ function Auth() {
     SignUp: false,
   });
   const navigate = useNavigate();
+  const navStateData = useLocation();
+  console.log(navStateData);
 
   // ✅ Only log when user changes (no spam on every keystroke)
   useEffect(() => {
@@ -32,7 +34,7 @@ function Auth() {
 
     if (action === "SignIn") {
       setLoading({ ...loading, SignIn: true });
-      navigate('/');
+      navigate(navStateData?.state?.redirect || "/");
       signInWithEmailAndPassword(auth, email, password)
         .then((userInfo) => {
           dispatch({
@@ -48,7 +50,7 @@ function Auth() {
 
     } else if (action === "SignUp") {
       setLoading({ ...loading, SignUp: true });
-      navigate('/');
+      navigate(navStateData?.state?.redirect || "/");
       createUserWithEmailAndPassword(auth, email, password)
         .then((userInfo) => {
           dispatch({
@@ -72,10 +74,24 @@ function Auth() {
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1920px-Amazon_logo.svg.png?20250504041148"
           alt="Amazon Logo"
         />
-      </Link>
+      </Link> 
+      
+      {/* form */}
 
       <div className={classes.auth__container}>
         <h1>Sign In</h1>
+        {
+          navStateData?.state?.msg && 
+          <small style={{ 
+            fontSize: "14px",
+            padding: "5px", 
+            color: "red",
+            textAlign: "center",
+            fontWeight: "bold" }}>
+              {navStateData?.state?.msg}
+              </small>
+        }
+       
         <form>
           <div>
             <label htmlFor="email">Email</label>
