@@ -1,5 +1,5 @@
 import React from 'react';
-import { categoryInfo } from './categoryInfo';
+import { categoryInfo } from './';
 import CategoryCard from './CategoryCard';
 import classes from './Category.module.css';
 
