@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import LayOut from '../../Components/LayOut/Layout';
+import LayOut from '../../Components/LayOut/LayOut';
 import { useParams } from 'react-router-dom';
 import ProductCard from '../../Components/Product/ProductCard';
 import axios from 'axios';
